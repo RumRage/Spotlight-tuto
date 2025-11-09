@@ -33,7 +33,7 @@ export default function Login() {
         </View>
 
         <Text style={styles.appName}>Spotlight</Text>
-        <Text style={styles.tagline}>Dont miss anything</Text>
+        <Text style={styles.tagline}>No te pierdas nada</Text>
       </View>
       {/* ILLUSTRATION */}
       <View style={styles.illustrationContainer}>
@@ -54,10 +54,10 @@ export default function Login() {
           <View style={styles.googleIconContainer}>
             <Ionicons name="logo-google" size={20} color={COLORS.surface} />
           </View>
-          <Text style={styles.googleButtonText}> Continue with Google</Text>
+          <Text style={styles.googleButtonText}> Continuar con Google</Text>
         </TouchableOpacity>
         <Text style={styles.termsText}>
-          By continuing, you agree to our Terms and Privacy Policy
+          Al continuar, aceptas nuestros Terminos y Condiciones
         </Text>
       </View>
     </View>

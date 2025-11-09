@@ -85,7 +85,7 @@ export default function CreateScreen() {
           <TouchableOpacity onPress={() => router.back()}>
             <Ionicons name="arrow-back" size={28} color={COLORS.primary} />
           </TouchableOpacity>
-          <Text style={styles.headerTitle}>New Post</Text>
+          <Text style={styles.headerTitle}>Nuevo Post</Text>
           <View style={{ width: 28 }} />
         </View>
 
@@ -94,7 +94,9 @@ export default function CreateScreen() {
           onPress={pickImage}
         >
           <Ionicons name="image-outline" size={48} color={COLORS.grey} />
-          <Text style={styles.emptyImageText}>Tap to select an image</Text>
+          <Text style={styles.emptyImageText}>
+            Toca para seleccionar una imagen
+          </Text>
         </TouchableOpacity>
       </View>
     );
@@ -122,7 +124,7 @@ export default function CreateScreen() {
               color={isSharing ? COLORS.grey : COLORS.white}
             />
           </TouchableOpacity>
-          <Text style={styles.headerTitle}>New Post</Text>
+          <Text style={styles.headerTitle}>Nuevo Post</Text>
           <TouchableOpacity
             style={[
               styles.shareButton,
@@ -134,7 +136,7 @@ export default function CreateScreen() {
             {isSharing ? (
               <ActivityIndicator size="small" color={COLORS.primary} />
             ) : (
-              <Text style={styles.shareText}>Share</Text>
+              <Text style={styles.shareText}>Subir</Text>
             )}
           </TouchableOpacity>
         </View>
@@ -175,7 +177,7 @@ export default function CreateScreen() {
                 />
                 <TextInput
                   style={styles.captionInput}
-                  placeholder="Write a caption..."
+                  placeholder="¿Qué estas pensando?"
                   placeholderTextColor={COLORS.grey}
                   multiline
                   value={caption}
