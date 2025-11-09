@@ -20,9 +20,7 @@ export default function UserProfileScreen() {
   const { id } = useLocalSearchParams();
   const router = useRouter();
 
-  const profile = useQuery(api.users.getUserProfile, {
-    id: id as Id<"users">,
-  });
+  const profile = useQuery(api.users.getUserProfile, { id: id as Id<"users"> });
   const posts = useQuery(api.posts.getPostsByUser, {
     userId: id as Id<"users">,
   });
@@ -73,7 +71,7 @@ export default function UserProfileScreen() {
               </View>
               <View style={styles.statItem}>
                 <Text style={styles.statNumber}>{profile.following}</Text>
-                <Text style={styles.statLabel}>Siguiendo</Text>
+                <Text style={styles.statLabel}>Seguidos</Text>
               </View>
             </View>
           </View>
@@ -82,7 +80,7 @@ export default function UserProfileScreen() {
           {profile.bio && <Text style={styles.bio}>{profile.bio}</Text>}
 
           <Pressable
-            style={[styles.followButton, isFollowing && styles.followButton]}
+            style={[styles.followButton, isFollowing && styles.followingButton]}
             onPress={() => toggleFollow({ followingId: id as Id<"users"> })}
           >
             <Text
@@ -100,7 +98,7 @@ export default function UserProfileScreen() {
           {posts.length === 0 ? (
             <View style={styles.noPostsContainer}>
               <Ionicons name="images-outline" size={48} color={COLORS.grey} />
-              <Text style={styles.noPostsText}>No posts yet</Text>
+              <Text style={styles.noPostsText}>Aún no hay posts</Text>
             </View>
           ) : (
             <FlatList

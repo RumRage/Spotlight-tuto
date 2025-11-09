@@ -15,7 +15,7 @@ export default function InitialLayout() {
 
     if (!isSignedIn && !inAuthScreen) router.replace("/(auth)/login");
     else if (isSignedIn && inAuthScreen) router.replace("/(tabs)");
-  }, [isLoaded, isSignedIn, segments, router]);
+  }, [isLoaded, isSignedIn, segments]);
 
   if (!isLoaded) return null;
 

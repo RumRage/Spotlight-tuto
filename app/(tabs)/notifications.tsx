@@ -16,7 +16,7 @@ export default function Notifications() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text>Notificaciones</Text>
+        <Text style={styles.headerTitle}>Notificaciones</Text>
       </View>
 
       <FlatList
@@ -35,8 +35,7 @@ function NoNotificationsFound() {
     <View style={[styles.container, styles.centered]}>
       <Ionicons name="notifications-outline" size={48} color={COLORS.primary} />
       <Text style={{ fontSize: 20, color: COLORS.white }}>
-        {" "}
-        Sin notificaciones
+        No notifications yet
       </Text>
     </View>
   );

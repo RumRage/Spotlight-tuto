@@ -119,7 +119,7 @@ export default function Profile() {
             >
               <Image
                 source={item.imageUrl}
-                style={styles.gridItem}
+                style={styles.gridImage}
                 contentFit="cover"
                 transition={200}
               />
@@ -195,7 +195,7 @@ export default function Profile() {
         <View style={styles.modalBackdrop}>
           {selectedPost && (
             <View style={styles.postDetailContainer}>
-              <View style={styles.postDetailContainer}>
+              <View style={styles.postDetailHeader}>
                 <TouchableOpacity onPress={() => setSelectedPost(null)}>
                   <Ionicons name="close" size={24} color={COLORS.white} />
                 </TouchableOpacity>
