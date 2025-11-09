@@ -17,7 +17,7 @@ export default function Login() {
 
       if (setActive && createdSessionId) {
         setActive({ session: createdSessionId });
-        router.replace("/(tabs)/index");
+        router.replace("/(tabs)");
       }
     } catch (error) {
       console.error("OAuth error", error);
